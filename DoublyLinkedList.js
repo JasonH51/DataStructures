@@ -98,12 +98,11 @@ class DoublyLinkedList {
 
   toString() {
     let node = this.first;
-    for (let i = 0; i <= this.length; i++) {
+    while (node.next) {
       console.log(node);
-      if (node.next) {
-        node = node.next;
-      }
+      node = node.next;
     }
+    console.log(node);
   }
 }
 
@@ -114,9 +113,10 @@ linkedList.append(1);
 linkedList.append(2);
 linkedList.append(3);
 linkedList.insert(1, 544);
+linkedList.insert(2, 54);
 // linkedList.access(0);
 // console.log(linkedList.access(3));
 // console.log(linkedList.search(544));
-linkedList.delete(1);
+// linkedList.delete(1);
 
 linkedList.toString();
