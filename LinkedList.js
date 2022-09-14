@@ -92,10 +92,11 @@ class LinkedList {
 
   toString() {
     let node = this.first;
-    for (let i = 0; i <= this.length; i++) {
+    while (node.next) {
       console.log(node);
       node = node.next;
     }
+    console.log(node);
   }
 }
 
